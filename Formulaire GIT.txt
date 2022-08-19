@@ -1,0 +1,84 @@
+------------------------------------------------------------GIT------------------------------------------------------------
+
+--------------------------------------------------------- FICHIERS --------------------------------------------------------
+
+- README.md //documentation du projet
+- .gitignore //ignorer des fichiers dans le pull
+- .gitkeep //conserver dossier vide
+
+
+
+--------------------------------------------------------- COMMANDES -------------------------------------------------------
+
+- git {command} --help
+- git config --global user.name '<nom prenom>' //à faire 1 unique fois
+- git config --global user.email '<nom prenom>' //à faire 1 unique fois
+
+- git remote add origin {URL} //dans un dossier lorsque deux versions cloud et local existent
+- git clone {URL} //dans un dossier où l'on souhaite récupérer les fichiers
+- git init //dans un dossier que l'on souhaite versionner
+
+- git branch main //créer
+- git checkout main //se déplacer sur la branche main
+- git checkout -b <name_branch> //créer et se déplacer sur la nouvelle branche
+
+- git branch //affiche les branches
+- git branch -m old_name new_name //renommer une branche en new_name
+- git branch -d user //supprime la branche user
+
+- git add <fichier.txt>
+- git add --all //ajoute tous les fichiers sauf ceux du .gitignore
+- git commit -m "<argument>"
+- git commit
+- git commit --amend --no-edit //sans modifier du msg du dernier commit, modifie les fichiers de l'index du précédent commit
+- git commit --amend //en modifiant le message du dernier commit
+- git commit --amend -m "msg" //en modifiant le message du dernier commit par le message msg
+
+- git status
+- git log
+- git log --oneline
+- git log --graph
+
+- git diff {id1}{id2} //différences entre deux commits
+- git blame index.htlm //différences détaillées avec la précision des auteurs des modifications
+
+- git push origin main //push de la branche main
+- git fetch //Récupérer les MAJ du dépôt distant sans fusionner
+
+- git merge features //fusionne features avec le main
+- git merge --abort //annule la fusion
+
+- git pull origin main //fusionne deux branches depuis le main du dépôt distant (PULL = FETCH + MERGE)
+
+- git checkout {id} //regarder l'état du dépôt à partir de l'id d'un commit
+- git checkout {id} file.txt //restaurer un fichier à partir d'un commit à son état datant du commit
+- git checkout file.txt // restaurer un fichier tel qu'il était au niveau HEAD
+- git checkout {name_of_current_branch} //sortir du mode spectateur
+
+- git reset {id} –soft //supprime les commits après l'id indiqué / Conserve les modifications effectuées / Conserve les fichiers modifiés dans l'index
+- git reset {id} –mixed //supprime les commits après l'id indiqué / NE conserve PAS les modifications effectuées / Conserve les fichiers modifiés dans l'index
+- git reset {id} --hard //supprime les commits après l'id indiqué / NE conserve PAS les modifications effectuées / NE conserve PAS les fichiers modifiés dans l'index
+
+- git revert {id} //après un push, crée un commit, retirer les modifications introduites par un commit, remplacera l'id par l'identifiant du commit
+
+
+---------------------------------------------------------- TERMINOLOGIE ----------------------------------------------------------
+
+● Repository (dépôt) : dossier de travail contenant les fichiers et dossiers d’un projet.
+● Init : initialiser un dépôt git en local.
+● Commit : action d’enregistrer vos modifications dans l’historique du projet. Il est accompagné d’un commit message.
+● Status : visualiser l’état du dépôt local.
+● Push : permet d’envoyer les modifications commitées du depôt local vers le dépôt distant.
+● Pull : récupérer les commits depuis le dépôt distant (ex: Github) en local.
+● Clone : récupérer un dépôt distant en local.
+● Checkout : visualiser ou revenir en arrière, également créer une branche et s’y déplacer.
+● Log : visualiser l’historique des commits.
+● Merge : action de fusionner deux versions (branches) d’un projet.
+● Fetch : action de récupérer les modifications du dépôt distant en local sans effectuer directement la fusion.
+● Conflicts (conflits) : modification(s) effectuée(s) sur les mêmes lignes d’un fichier dans 2 branches distinctes qui doivent être fusionnées.
+● Branch : version alternative du projet.
+● Diff : voir les différences entre 2 commits.
+● Rebase : action de rembobiner pour modifier des commits précédents ou de mettre les commits d’une branche à la suite d’une autre branche (les 2 branches doivent avoir un ancêtre (commit) en commun). Pour ce dernier point, c ’est l’équivalent d’une fusion.
+● Tag : attribuer un numéro de version avec un message à un commit.
+● Mv : déplacer ou renommer un fichier.
+● Rm : supprimer un fichier.
