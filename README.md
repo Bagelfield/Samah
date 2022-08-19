@@ -1,2 +1,3 @@
 # Samah
-Aide à Samah &lt;3
+Aide à Samah <3
+Bonjour Samah !
